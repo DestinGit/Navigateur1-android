@@ -27,11 +27,16 @@ public class CSVFromWeb extends AppCompatActivity {
         textViewCSV = (TextView) findViewById(R.id.textViewCSV);
 
 //        String lsUrl = "http://172.26.10.39:8084/ServletsJSPJSTLCours/CommuneFromDB";
-        String lsUrl = "http://172.26.10.39:8084/ServletsJSPJSTLCours/";
-        String lsRessource = "CommuneFromDB";
-        TacheAsynchrone t = new TacheAsynchrone();
-        t.setTextViewCSV(textViewCSV);
-        t.execute(lsUrl, lsRessource);
+        String lsUrl = "http://172.26.10.39:8080/ServletsJSPJSTLCours/";
+        String lsRessource = "PaysFromDB";
+//        String lsRessource = "CommuneFromDB";
+
+//        TacheAsynchrone t = new TacheAsynchrone();
+//        t.setTextViewCSV(textViewCSV);
+//        t.execute(lsUrl, lsRessource);
+
+//        ou
+        new TacheAsynchrone(textViewCSV).execute(lsUrl, lsRessource);
 //        new TacheAsynchrone().execute(lsUrl);
     }
 

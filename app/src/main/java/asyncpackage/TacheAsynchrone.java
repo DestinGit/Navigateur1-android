@@ -12,6 +12,14 @@ import java.net.URL;
  */
 public class TacheAsynchrone extends AsyncTask<String, Integer, String> {
     private TextView textViewCSV;
+
+    public TacheAsynchrone() {
+    }
+
+    public TacheAsynchrone(TextView textViewCSV) {
+        this.textViewCSV = textViewCSV;
+    }
+
     public void setTextViewCSV(TextView textViewCSV) {
         this.textViewCSV = textViewCSV;
     }
