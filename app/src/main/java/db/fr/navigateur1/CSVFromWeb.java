@@ -14,6 +14,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import asyncpackage.TacheAsynchrone;
+
 public class CSVFromWeb extends AppCompatActivity {
     private TextView textViewCSV;
 
@@ -24,10 +26,16 @@ public class CSVFromWeb extends AppCompatActivity {
         setContentView(R.layout.csvfrom_web);
         textViewCSV = (TextView) findViewById(R.id.textViewCSV);
 
-        String lsUrl = "http://172.26.10.39:8084/ServletsJSPJSTLCours/CommuneFromDB";
-        new TacheAsynchrone().execute(lsUrl);
+//        String lsUrl = "http://172.26.10.39:8084/ServletsJSPJSTLCours/CommuneFromDB";
+        String lsUrl = "http://172.26.10.39:8084/ServletsJSPJSTLCours/";
+        String lsRessource = "CommuneFromDB";
+        TacheAsynchrone t = new TacheAsynchrone();
+        t.setTextViewCSV(textViewCSV);
+        t.execute(lsUrl, lsRessource);
+//        new TacheAsynchrone().execute(lsUrl);
     }
 
+    /*
     private class TacheAsynchrone extends AsyncTask<String, Integer, List<String>> {
         @Override
         // ----------------------------------
@@ -90,4 +98,6 @@ public class CSVFromWeb extends AppCompatActivity {
             textViewCSV.setText(lsb.toString());
         } /// onPostExecute
     } /// TacheAsynchrone
+
+    */
 }
