@@ -11,10 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Main" />
-        <activity android:name=".Navigateur1"></activity>
-        <activity android:name=".TacheAsynchroneTest">
-        </activity>
+        <activity android:name=".Navigateur1" />
+        <activity android:name=".TacheAsynchroneTest"></activity>
         <activity android:name=".CSV2TextView">
+        </activity>
+        <activity android:name=".CSVFromWeb">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
